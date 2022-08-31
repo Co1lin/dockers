@@ -5,9 +5,9 @@ on:
     branches:
       - 'main'
     paths:
-      - .github/workflows/${{ github.workflow }}.yml
+      - .github/workflows/ubuntu-basic.yml
       - .github/actions/build-push/**
-      - ./${{ github.workflow }}/**
+      - ubuntu-basic/**
 
 jobs:
   docker:
