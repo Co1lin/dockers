@@ -1,5 +1,5 @@
 #!/bin/bash
-# this script push the proxy docker from Docker Hub to Aliyun image registry
+# this script push the proxy docker from Docker Hub to Alibaba Cloud Container Registry (ACR)
 
 set -ex
 
