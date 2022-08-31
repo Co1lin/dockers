@@ -7,6 +7,7 @@ on:
     paths:
       - .github/workflows/ubuntu-basic.yml
       - ubuntu-basic/**
+      - .github/workflows/build_push_docker.yml
 
 jobs:
   ubuntu-basic:
