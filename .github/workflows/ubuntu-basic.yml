@@ -10,7 +10,7 @@ on:
 
 jobs:
   ubuntu-basic:
-    uses: .github/workflows/build_push_docker.yml@main
+    uses: ./.github/workflows/build_push_docker.yml@main
     with:
       path: ubuntu-basic
     secrets: inherit
