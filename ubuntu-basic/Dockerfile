@@ -4,6 +4,8 @@ LABEL maintainer="mail@co1in.me"
 ARG TARGETOS
 ARG TARGETARCH
 
+SHELL ["/bin/bash", "-c"]
+
 RUN set -ex; apt update \
     && apt install -y git sudo curl
 RUN set -ex; useradd -m -s /bin/bash -G sudo ubuntu \
