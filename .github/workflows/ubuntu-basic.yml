@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
-        uses: .github/actions/build-push
+        uses: ./.github/actions/build-push
         with:
           path: ${{ github.workflow }}
