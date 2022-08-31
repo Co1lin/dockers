@@ -1,2 +1,2 @@
 # dockers
-useful docker imaegs
+useful docker images
