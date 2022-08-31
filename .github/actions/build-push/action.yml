@@ -1,3 +1,4 @@
+# deprecated
 name: Docker build and push
 description: Build and push docker image
 
@@ -15,6 +16,7 @@ runs:
       env:
         owner: ${{ github.repository_owner }}
       run: echo "user_lc=${owner,,}" >> ${GITHUB_ENV}
+      shell: bash
     -
       name: Checkout
       uses: actions/checkout@v3

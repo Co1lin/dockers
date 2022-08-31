@@ -6,16 +6,11 @@ on:
       - 'main'
     paths:
       - .github/workflows/ubuntu-basic.yml
-      - .github/actions/build-push/**
       - ubuntu-basic/**
 
 jobs:
-  docker:
-    runs-on: ubuntu-latest
-    steps:
-      -
-        uses: actions/checkout@v3
-      -
-        uses: ./.github/actions/build-push
-        with:
-          path: ${{ github.workflow }}
+  ubuntu-basic:
+    uses: .github/workflows/build_push_docker.yml@main
+    with:
+      path: ubuntu-basic
+    secrets: inherit
