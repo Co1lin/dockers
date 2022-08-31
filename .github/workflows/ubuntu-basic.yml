@@ -8,7 +8,7 @@ on:
       - .github/workflows/**
       # - .github/workflows/${{ github.workflow }}.yml
       # - .github/actions/build-push/**
-      - ${{ github.workflow }}/**
+      - ubuntu-basic/**
 
 jobs:
   docker:
