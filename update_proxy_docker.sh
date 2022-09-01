@@ -15,6 +15,6 @@ docker rmi registry.cn-beijing.aliyuncs.com/co1lin/network:latest
 set -e
 docker images
 
-docker tag teddysun/v2ray:latest registry.cn-beijing.aliyuncs.com/co1lin/network:latest
+docker tag teddysun/v2ray:latest registry.cn-beijing.aliyuncs.com/user/network:latest
 
-docker push registry.cn-beijing.aliyuncs.com/co1lin/network:latest
+docker push registry.cn-beijing.aliyuncs.com/user/network:latest
