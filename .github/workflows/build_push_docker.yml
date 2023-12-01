@@ -4,7 +4,10 @@ name: Build and push docker
 on:
   workflow_call:
     inputs:
-      path:
+      dir_path:
+        required: true
+        type: string
+      name:
         required: true
         type: string
 
@@ -45,9 +48,9 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: ${{ inputs.path }}
+          context: ${{ inputs.dir_path }}
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ${{ env.user_lc }}/${{ inputs.path }}:latest
-            ghcr.io/${{ env.user_lc }}/${{ inputs.path }}:latest
+            ${{ env.user_lc }}/${{ inputs.name }}:latest
+            ghcr.io/${{ env.user_lc }}/${{ inputs.name }}:latest

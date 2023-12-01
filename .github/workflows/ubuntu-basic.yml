@@ -13,5 +13,6 @@ jobs:
   ubuntu-basic:
     uses: ./.github/workflows/build_push_docker.yml
     with:
-      path: ubuntu-basic
+      dir_path: ubuntu-basic
+      name: ubuntu-basic
     secrets: inherit
