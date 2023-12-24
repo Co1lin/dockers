@@ -19,18 +19,10 @@ RUN set -ex; echo 'setup by ML-Env-Setup' \
     && cd ML-Env-Setup \
     && bash 0_basic.sh
 RUN set -ex; echo "Building for ${TARGETOS}/${TARGETARCH}" \
-    && if [[ "${TARGETARCH}" == "amd64" ]]; then \
-            INSTALL_SCRIPT=Miniconda3-latest-Linux-x86_64.sh; \
-        elif [[ "${TARGETARCH}" == "arm64" ]]; then \
-            INSTALL_SCRIPT=Miniconda3-latest-Linux-aarch64.sh; \
-        else \
-            echo "Unknown architecture: ${TARGETARCH}"; \
-            exit 1; \
-        fi \
-    && curl -O https://repo.anaconda.com/miniconda/${INSTALL_SCRIPT} \
-    && ls -l && bash ~/${INSTALL_SCRIPT} -b \
+    && curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh" \
+    && ls -l && bash Miniforge3-$(uname)-$(uname -m).sh -b \
     && ls -l \
-    && ~/miniconda3/bin/conda init bash \
-    && ~/miniconda3/bin/conda init zsh
+    && ~/miniforge3/bin/mamba init bash \
+    && ~/miniforge3/bin/mamba init zsh
 
 CMD [ "zsh" ]
