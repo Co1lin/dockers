@@ -7,7 +7,7 @@ ARG TARGETARCH
 SHELL ["/bin/bash", "-c"]
 
 RUN set -ex; apt update \
-    && apt install -y git sudo curl build-essential
+    && apt install -y git sudo curl build-essential strace
 RUN set -ex; useradd -m -s /bin/bash -G sudo ubuntu \
     && echo "root:ubuntu" | chpasswd \
     && echo "ubuntu:ubuntu" | chpasswd \
