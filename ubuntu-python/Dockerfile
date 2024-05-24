@@ -17,7 +17,7 @@ RUN set -ex; source ~/miniforge3/bin/activate; pip --version; \
      mysql-connector-python pycryptodome Kivy \
      elasticsearch jwt h5py gym biopython lxml gensim \
      sympy celery paho-mqtt mock python-dotenv \
-     plotly jax tweepy geopandas astropy scapy \
+     plotly jax tweepy geopandas astropy \
      pydantic dash pytz WTForms streamlit psutil nibabel \
      joblib grpcio bpy bottle Flask-WTF \
      SpeechRecognition six paramiko maya graphene alembic;
