@@ -20,8 +20,6 @@ RUN set -ex; source ~/miniforge3/bin/activate; pip --version; \
      plotly jax tweepy geopandas astropy scapy \
      pydantic dash pytz WTForms streamlit psutil nibabel \
      joblib grpcio bpy bottle Flask-WTF \
-     SpeechRecognition six paramiko maya graphene alembic; \
-     pip install --no-cache-dir --extra-index-url https://rospypi.github.io/simple/ rospy; \
-     pip install --no-cache-dir "apache-airflow[celery]==2.9.0" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.9.0/constraints-3.8.txt"
+     SpeechRecognition six paramiko maya graphene alembic;
 RUN rm -rf /home/ubuntu/.cache
 CMD [ "zsh" ]
