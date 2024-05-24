@@ -19,7 +19,7 @@ RUN set -ex; source ~/miniforge3/bin/activate; pip --version; \
      sympy celery paho-mqtt mock python-dotenv \
      plotly jax tweepy geopandas astropy \
      pydantic dash pytz WTForms streamlit psutil nibabel \
-     joblib grpcio bpy bottle Flask-WTF \
+     joblib grpcio bottle Flask-WTF \
      SpeechRecognition six paramiko maya graphene alembic;
 RUN rm -rf /home/ubuntu/.cache
 CMD [ "zsh" ]
