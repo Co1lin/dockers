@@ -9,7 +9,7 @@ SHELL ["/bin/bash", "-c"]
 RUN set -ex; source ~/miniforge3/bin/activate; pip --version; \
     pip install --no-cache-dir numpy django pandas torch matplotlib \
      flask tensorflow opencv-python djangorestframework \
-     beautifulsoup4 SQLAlchemy scikit-learn PyQt5 pillow \
+     beautifulsoup4 SQLAlchemy scikit-learn pillow \
      boto3 pygame pyyaml selenium pytest click 'discord.py' \
      fastapi nltk pymongo scipy aiohttp \
      keras scrapy networkx pyspark 'redis[hiredis]' \
