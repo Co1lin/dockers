@@ -12,7 +12,7 @@ RUN set -ex; source ~/miniforge3/bin/activate; pip --version; \
      beautifulsoup4 SQLAlchemy scikit-learn PyQt5 pillow \
      boto3 pygame pyyaml selenium pytest click 'discord.py' \
      fastapi nltk pymongo scipy aiohttp \
-     keras scrapy networkx pyspark spacy 'redis[hiredis]' \
+     keras scrapy networkx pyspark 'redis[hiredis]' \
      Jinja2 pulumi marshmallow tornado \
      mysql-connector-python pycryptodome Kivy \
      elasticsearch jwt h5py gym biopython lxml gensim \
