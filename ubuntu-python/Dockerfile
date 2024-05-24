@@ -22,13 +22,15 @@ SHELL ["/bin/bash", "-c"]
 #      joblib grpcio bottle Flask-WTF \
 #      SpeechRecognition six paramiko maya graphene alembic;
 
+RUN apt install pkg-config
+RUN source ~/miniforge3/bin/activate; pip install tensorflow
 RUN source ~/miniforge3/bin/activate; pip install numpy
 RUN source ~/miniforge3/bin/activate; pip install django
 RUN source ~/miniforge3/bin/activate; pip install pandas
 RUN source ~/miniforge3/bin/activate; pip install torch
 RUN source ~/miniforge3/bin/activate; pip install matplotlib
 RUN source ~/miniforge3/bin/activate; pip install flask
-RUN source ~/miniforge3/bin/activate; pip install tensorflow
+
 RUN source ~/miniforge3/bin/activate; pip install opencv-python
 RUN source ~/miniforge3/bin/activate; pip install djangorestframework
 RUN source ~/miniforge3/bin/activate; pip install beautifulsoup4
