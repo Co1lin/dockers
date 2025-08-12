@@ -22,7 +22,7 @@ SHELL ["/bin/bash", "-c"]
 #      joblib grpcio bottle Flask-WTF \
 #      SpeechRecognition six paramiko maya graphene alembic;
 
-RUN sudo apt install -y pkg-config libhdf5-dev
+RUN sudo apt update && sudo apt install -y pkg-config libhdf5-dev
 RUN source ~/miniforge3/bin/activate; pip install tensorflow
 RUN source ~/miniforge3/bin/activate; pip install numpy
 RUN source ~/miniforge3/bin/activate; pip install django
